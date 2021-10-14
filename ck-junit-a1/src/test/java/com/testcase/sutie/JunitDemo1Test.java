@@ -11,8 +11,8 @@ import org.junit.jupiter.api.*;
  * @Created by qingwei.han
  */
 
-@DisplayName("junit5 演示类")
-public class JunitDemo1 {
+@DisplayName("junit5演示类")
+public class JunitDemo1Test {
 
 	//@beforeall:在所有的方法之前，运行;
 	@BeforeAll
@@ -48,16 +48,18 @@ public class JunitDemo1 {
 		System.out.println("only after---------------");
 	}
 
-	@Test
-	@Disabled
-	void fun1(){
-		System.out.println("test 01");
+//	@Test
+	@DisplayName("Function_2")
+	@RepeatedTest(value = 3)
+	@Tag("two")
+	void fun2(){
+		System.out.println("test 02");
 	}
 
 	@Test
-	@DisplayName("fun2-B")
-	@RepeatedTest(value = 3)
-	void fun2(){
-		System.out.println("test 02");
+//	@Disabled
+	@DisplayName(value = "Function_1")
+	void fun1(){
+		System.out.println("test 01");
 	}
 }
