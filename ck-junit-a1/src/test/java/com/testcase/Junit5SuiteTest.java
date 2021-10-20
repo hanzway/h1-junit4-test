@@ -1,7 +1,6 @@
 package com.testcase;
 
 import org.junit.platform.runner.JUnitPlatform;
-import org.junit.platform.suite.api.IncludeTags;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
@@ -11,9 +10,9 @@ import org.junit.runner.RunWith;
  */
 
 @RunWith(JUnitPlatform.class)
-@SelectPackages({"com.testcase.sutie", "com.testcase.suite2"})
+@SelectPackages({"com.testcase.sutie"})
 //@IncludePackages({"com.testcase.sutie", "com.testcase.suite2"})
-@IncludeTags(value = {"two"})
+//@IncludeTags(value = {"two"})
 public class Junit5SuiteTest {
 
 }

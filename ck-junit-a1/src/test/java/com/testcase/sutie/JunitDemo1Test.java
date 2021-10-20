@@ -14,17 +14,17 @@ import org.junit.jupiter.api.*;
 @DisplayName("junit5演示类")
 public class JunitDemo1Test {
 
-	//@beforeall:在所有的方法之前，运行;
+	//@Beforeall:在所有的方法之前，运行;
 	@BeforeAll
 	public static void beforeAll(){
-		System.out.println("Before ------");
+		System.out.println("Before all------");
 	}
 
 
-	//@afterall: 在所有的方法之后运行;
+	//@AfterAll: 在所有的方法之后运行;
 	@AfterAll
 	public static void afterAll(){
-		System.out.println("after ------");
+		System.out.println("after all------");
 	}
 
 	@BeforeEach
@@ -57,7 +57,7 @@ public class JunitDemo1Test {
 	}
 
 	@Test
-//	@Disabled
+	@Disabled
 	@DisplayName(value = "Function_1")
 	void fun1(){
 		System.out.println("test 01");
